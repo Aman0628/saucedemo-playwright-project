@@ -15,7 +15,7 @@ const config = {
   reporter: 'html',
   use: {
     browserName: 'chromium',
-    headless: false,
+    headless: 'ture',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'retain-on-failure',
