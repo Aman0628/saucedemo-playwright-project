@@ -1,11 +1,64 @@
 [
-    {
+  {
+    "testCase": "Valid login",
     "username": "standard_user",
     "password": "secret_sauce",
-    "productName": "Sauce Labs Bolt T-Shirt"
-},
-{
-    "username": "visual_user",
+    "productName": "Sauce Labs Bolt T-Shirt",
+    "shouldLogin": true
+  },
+  {
+    "testCase": "Login with problem_user",
+    "username": "problem_user",
     "password": "secret_sauce",
-    "productName": "Test.allTheThings() T-Shirt (Red)"
-}] 
+    "productName": "Test.allTheThings() T-Shirt (Red)",
+    "shouldLogin": true
+  },
+  {
+    "testCase": "Login with performance_glitch_user",
+    "username": "performance_glitch_user",
+    "password": "secret_sauce",
+    "shouldLogin": true
+  },
+  {
+    "testCase": "Invalid username",
+    "username": "erformance_glitch_user",
+    "password": "secret_sauce",
+    "shouldLogin": false,
+    "errorMessage": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testCase": "Invalid password",
+    "username": "performance_glitch_user",
+    "password": "ecret_sauce",
+    "shouldLogin": false,
+    "errorMessage": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testCase": "Both invalid",
+    "username": "erformance_glitch_user",
+    "password": "ecret_sauce",
+    "shouldLogin": false,
+    "errorMessage": "Epic sadface: Username and password do not match any user in this service"
+  },
+  {
+    "testCase": "Empty username",
+    "username": "",
+    "password": "secret_sauce",
+    "shouldLogin": false,
+    "errorMessage": "Epic sadface: Username is required"
+  },
+  {
+    "testCase": "Empty password",
+    "username": "performance_glitch_user",
+    "password": "",
+    "shouldLogin": false,
+    "errorMessage": "Epic sadface: Password is required"
+  },
+  {
+    "testCase": "Empty credentials",
+    "username": "",
+    "password": "",
+    "shouldLogin": false,
+    "errorMessage": "Epic sadface: Username is required"
+  }
+]
