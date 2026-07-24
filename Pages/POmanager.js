@@ -8,8 +8,6 @@ class POmanager {
         this.page = page;
         this.loginPage = new LoginPage(page);
         this.inventory = new Inventory(page);
-        // this.addToCart = new AddToCart(page);
-        // this.checkout = new Checkout(page);
     }
 
     getmeLoginPage() {
@@ -17,14 +15,6 @@ class POmanager {
     }
     getmeInventory() {
         return this.inventory;
-    }
-
-    getmeAddToCart() {
-        return this.addToCart;
-    }
-
-    getmeCheckout() {
-        return this.checkout;
     }
 }
 

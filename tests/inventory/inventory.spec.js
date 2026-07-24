@@ -14,7 +14,11 @@ test.beforeEach(async ({ page }) => {
 test("verify Page successfully loaded", async ({ page }) => {
     const poManager = new POmanager(page);
     const inventory = poManager.getmeInventory();
-    
+
     await inventory.verifyPageLoaded();
-    await inventory.allProducts();
+    await inventory.verifyAllProductsDisplayed();
+    await inventory.verifyProductName();
+    await inventory.verifyProductPrice();
+    await inventory.addToCartProduct();
+    await inventory.removeProdcut();
 });
