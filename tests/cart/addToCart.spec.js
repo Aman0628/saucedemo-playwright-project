@@ -103,6 +103,7 @@ test("add to cart from the product detail page", async ({ loggedInPoManager }) =
 // success - if this ever starts passing with count 1, the bug was fixed
 // upstream and this test should be updated to match.
 test("add to cart is a known broken interaction for problem_user", async ({ poManager }) => {
+     test.fail(); // We expect this test to fail because of a known application bug
     const loginPage = poManager.getmeLoginPage();
     const inventory = poManager.getmeInventory();
 
