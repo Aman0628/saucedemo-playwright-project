@@ -1,0 +1,41 @@
+[
+  {
+    "testCase": "Missing first name",
+    "firstName": "",
+    "lastName": "Kumar",
+    "zip": "453441",
+    "shouldProceed": false,
+    "errorMessage": "Error: First Name is required"
+  },
+  {
+    "testCase": "Missing last name",
+    "firstName": "Aman",
+    "lastName": "",
+    "zip": "453441",
+    "shouldProceed": false,
+    "errorMessage": "Error: Last Name is required"
+  },
+  {
+    "testCase": "Missing zip code",
+    "firstName": "Aman",
+    "lastName": "Kumar",
+    "zip": "",
+    "shouldProceed": false,
+    "errorMessage": "Error: Postal Code is required"
+  },
+  {
+    "testCase": "All fields empty",
+    "firstName": "",
+    "lastName": "",
+    "zip": "",
+    "shouldProceed": false,
+    "errorMessage": "Error: First Name is required"
+  },
+  {
+    "testCase": "Valid checkout info",
+    "firstName": "Aman",
+    "lastName": "Kumar",
+    "zip": "453441",
+    "shouldProceed": true
+  }
+]
